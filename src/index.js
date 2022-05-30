@@ -32,6 +32,7 @@ app.set('view engine', 'handlebars');
 //app.engine('handlebars', hbs( {defaultLayout: 'default', helpers: {select: selectOption}, handlebars: allowInsecurePrototypeAccess(_handlebars)}));
 
 //Settings
+
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs.engine({

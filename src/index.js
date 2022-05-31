@@ -5,6 +5,7 @@ const methodOverride = require ('method-override');
 const session = require ('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
+const connectToDb = require("./database");
 require("dotenv").config();
 
 //initializations
@@ -77,7 +78,7 @@ app.use(require('./routes/users'));
 //static files
 
 app.use(express.static(path.join(__dirname, 'public')));
-
+connectToDb();
 //server is listening
 
 app.listen(app.get('port'),()=>{

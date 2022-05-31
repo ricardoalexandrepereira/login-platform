@@ -1,8 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
+const connectToDb = () => {
+  mongoose
+    .connect(process.env.DB_URI)
+    .then(() => console.log("Mongo DB Atlas Conectado!"))
+    .catch((err) => console.log(err));
+};
 
-mongoose.connect(process.env.DB_URI)
-
-.then(db => console.log('db is connected'))
-.catch(err => console.error(err))
-
+module.exports = connectToDb;

@@ -1,7 +1,7 @@
 const helpers = {};
 
-helpers.isAuthenticated = (req, res, next)=>{
-    if(req.isAuthenticated()){
+helpers.isAuthenticated = async (req, res, next)=>{
+    if( await req.isAuthenticated()){
         return next();
     }
     req.flash('error_msg', 'Not Authorized');

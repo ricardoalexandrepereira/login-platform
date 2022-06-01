@@ -1,13 +1,13 @@
 body{
-background: #544a7d;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ffd452, #544a7d);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ffd452, #544a7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image:url("../img/U1c.gif");
+    background-position: cover;
+    object-fit: cover;
 
 }
 .jumbotron-mt-4{
     background-color: #ffffff;
     padding:2rem;
-  
+    
 
 }
 .logo{

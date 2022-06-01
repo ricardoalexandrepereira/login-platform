@@ -35,7 +35,7 @@ router.post('/notes/new-note', isAuthenticated, async (req,res)=>{
 });
 
 router.get('/notes', isAuthenticated, async (req,res)=>{
-    const notes = await Note.find({user: req.user.id}).lean().sort({date: 'desc'}); //lean serve para corrigir o erro do heandlebars
+    const notes = await Note.find({user: req.user.id}).lean().sort({date: 'desc' }); //lean serve para corrigir o erro do heandlebars
     res.render('notes/all-notes', { notes })
 });
 
